@@ -1,0 +1,75 @@
+Problem Statement    [ Mail @ Mridu.Alagh@go-mmt.com ]
+
+Time Limit 60 minutes
+
+Create a log query application. The application should read a log file which has application log data (as key and value) in JSON format.
+The log file is shared with this problem
+
+    eg : {"pfm":"DESKTOP", "level":"INFO", "step" : "SEARCH", "timestamp":"2020-11-18 13:24:11.039+0530"}
+         {"pfm":"PWA", "level":"DEBUG", "step" : "REVIEW", "timestamp":"2020-11-18 13:24:11.039+0530"}
+
+The application should be able to answer below queries
+queries
+    1. find total occurrence of a value
+    2. find occurrence of value1 and value2
+    3. find occurrence of value1 or value2
+
+    Bonus
+    * above queries in a specified time range
+
+Please have a Main class as entry point to run the code and set the query value
+
+Sample Input
+
+DESKTOP
+
+Sample Output
+
+4
+
+Sample Input
+
+DESKTOP and DEBUG
+
+Sample Output
+
+2
+
+Sample Input
+
+DESKTOP or DEBUG
+
+Sample Output
+
+6
+
+Sample Input
+
+DESKTOP  startTime = "2020-11-18 13:00:00" endTime = "2020-11-18 14:00:00"
+
+Sample Output
+2
+
+Sample Input
+DESKTOP and DEBUG  startTime = "2020-11-18 13:00:00" endTime = "2020-11-18 14:00:00"
+Sample Output
+1
+
+Sample Input
+DESKTOP or DEBUG  startTime = "2020-11-18 13:00:00" endTime = "2020-11-18 19:00:00"
+Sample Output
+6
+
+Expectations
+
+    Make sure that you have a working and demonstrable code
+    Make sure that the code is functionally correct
+    Code should be modular and readable
+    Separation of concern should be addressed
+    Please do not write everything in a single file
+    Code should easily accommodate new requirements and minimal changes
+    There should be a main method from where the code could be easily testable
+    [Optional] Write unit tests, if possible
+    No need to create a GUI
+
+
